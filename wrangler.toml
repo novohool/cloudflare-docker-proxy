@@ -2,6 +2,15 @@ name = "cloudflare-docker-proxy"
 workers_dev = true
 main = "src/index.js"
 compatibility_date = "2021-12-07"
+routes = [
+    { pattern = "docker.bnnd.eu.org", custom_domain = true },
+    { pattern = "quay.bnnd.eu.org", custom_domain = true },
+    { pattern = "gcr.bnnd.eu.org", custom_domain = true },
+    { pattern = "k8s-gcr.bnnd.eu.org", custom_domain = true },
+    { pattern = "k8s.bnnd.eu.org", custom_domain = true },
+    { pattern = "ghcr.bnnd.eu.org", custom_domain = true },
+    { pattern = "cloudsmith.bnnd.eu.org", custom_domain = true },
+]
 
 [dev]
 ip = "0.0.0.0"
